@@ -1,0 +1,148 @@
+.banner{
+  width: 100%;
+  height: auto;
+}
+
+.banner-img{
+  background-image: url('./../../assets/banner.jpg');
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.find-car{
+  padding: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.find-car-content{
+  width: 100%;
+}
+
+.find-car-title{
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 900;
+  font-family: exljbris;
+  color: #00a3ad;
+  margin-bottom: 16px;
+}
+
+.find-about{
+  font-size: 16px;
+  line-height: 20px;
+  color: #00a3ad;
+  font-family: exljbris;
+  margin-bottom: 20px;
+}
+
+.input-data{
+  margin: 20px 0;
+}
+
+.model,.brand,.age-year{
+  margin-bottom: 30px;
+}
+
+.model >input, .brand >input, .age-year>select{
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px solid #00a3ad;
+  outline: none;
+  width: 100%;
+  padding: 5px 0;
+
+  font-family: exljbris;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -.1px;
+}
+.model>input::placeholder, .brand >input::placeholder{
+  color: #b2b2b2;
+}
+
+.age-year>select{
+  background-color: white;
+  background-image: url('data:image/svg+xml;utf8,<svg width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg"><path d="M6.53 7.472c.26.26.68.26.94 0l5.335-5.333c.26-.263.26-.684 0-.944-.26-.26-.683-.26-.943 0L7 6.056l-4.862-4.86c-.26-.26-.683-.26-.943 0-.26.26-.26.68 0 .943L6.53 7.47z" stroke="%234A4A4A" fill="%234A4A4A" fill-rule="evenodd"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 100%;
+  cursor: pointer;
+}
+
+.submit-data{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.symol-money{
+  font-size: 40px;
+  font-weight: 900;
+  color: #00a3ad;
+  font-family: exljbris;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+.special-money{
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  color: #b2b2b2;
+  cursor: pointer;
+}
+
+.special-money::before{
+  content: "?";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  font-weight: 700;
+  border-radius: 50%;
+  border: 1px solid #b2b2b2;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: exljbris;
+  margin-top: 10px;
+}
+
+.symol-money::after{
+  content: "per month";
+  font-weight: 100;
+  position: absolute;
+  font-size: 16px;
+  line-height: 20px;
+  bottom: -25px;
+  display: block;
+  width: auto;
+  min-width: 75px;
+  align-items: center;
+  color: #3aa6b0;
+}
+
+.form-btn{
+  width: 100%;
+  background-color: #ffcd05;
+  color: #026786;
+  height: 59px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 59px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: exljbris;
+}

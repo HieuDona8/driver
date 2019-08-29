@@ -1,0 +1,98 @@
+/*dispaly none*/
+.header-desktop{
+	display: none;
+}
+
+/*header*/
+.header{
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 80;
+}
+
+.header-content{
+	height: 60px;
+	padding-left: 24px;
+	padding-right: 24px;
+	background-color: #00a3ad;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content >a{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	background: transparent;
+	border: none;
+}
+
+.icon-menu{
+	color: white;
+	width: 18px;
+	height: 12px;
+}
+
+
+.logo{
+	height: 27px;
+	width: auto;
+}
+
+.space{
+  width: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  /*header-dektop*/
+  .header-content{
+    display: none;
+  }
+  .header-desktop{
+    height: 72px;
+    background-color: #00a3ad;
+    display: flex;
+    justify-content: space-between;
+    line-height: 72px;
+    padding-left: 24px;
+    padding-right: 12px;
+    font-family: exljbris;
+    font-weight: 300;
+  }
+  
+  .btn-logo{
+    height: 100%;
+    padding-right: 24px;
+    background-color: transparent;
+    border: none;
+  
+    padding-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn-logo >img{
+    height: 27px;
+    width: auto;
+  }
+
+  /* menu */
+  .menu{
+    right: 0;
+    /* padding-left: 12px; */
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .menu > a{
+    text-decoration: none;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    letter-spacing: normal;
+  }
+}

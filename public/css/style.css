@@ -1,0 +1,47 @@
+@font-face{
+	font-family: exljbris;
+	src: url('../fonts/exljbris_MuseoSansRounded_100.otf');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: exljbris;
+	src: url('../fonts/exljbris_MuseoSansRounded_300.otf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: exljbris;
+	src: url('../fonts/exljbris_MuseoSansRounded_500.otf');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: exljbris;
+	src: url('../fonts/exljbris_MuseoSansRounded_700.otf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: exljbris;
+	src: url('../fonts/exljbris_MuseoSansRounded_900.otf');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: exljbris;
+	src: url('../fonts/exljbris_MuseoSansRounded_1000.otf');
+	font-weight: 1000;
+	font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
