@@ -1,9 +1,68 @@
 [
   {
-    "Alfa Romeo":{"Giulia":}
+    "nameBrand":"Alfa Romeo",
+    "listModel":[
+      {
+        "nameModel":"Giulia",
+        "price":[720,640,560]
+      
+      },
+      {
+        "nameModel":"Stelvio",
+        "price":[880,800,720]
+      },
+      {
+        "nameModel":"Giulietta",
+        "price":[680,600,560]
+      }
+    ]
   },
-  {"Aston Martin":""},
-  {"Bentley":""},
-  {"Audi":""},
-  {"BMW":""}
+  {
+    "nameBrand":"Aston Martin",
+    "listModel":[
+      {
+        "nameModel":"DB9",
+        "price":[2680,2400,2160]
+      },
+      {
+        "nameModel":"DB11",
+        "price":[3560,3200,2880]
+      },
+      {
+        "nameModel":"DBS",
+        "price":[3800,3400,3080]
+      },
+      {
+        "nameModel":"Vanquish",
+        "price":[3800,3400,3080]
+      },
+      {
+        "nameModel":"Vantage",
+        "price":[3800,3400,3080]
+      }
+    ]
+  },
+  {
+    "nameBrand":"Bentley",
+    "listModel":[
+      {
+        "nameModel":"Bentayga",
+        "price":[4040,3640,3200]
+      },
+      {
+        "nameModel":"Continental GT",
+        "price":[5760,5200,4680]
+      },
+      {
+        "nameModel":"Flying Spur",
+        "price":[4040,3640,3200]
+      },
+      {
+        "nameModel":"Mulsanne",
+        "price":[4040,3640,3200]
+      }
+    ]
+  }
+  
 ]
+
