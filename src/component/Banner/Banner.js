@@ -38,10 +38,18 @@ class Banner extends Component {
     modal.id = 'modal-brand';
     brand.appendChild(modal);
 
+    const that = this;
     if(!inputBrand.value){
       ListCar.map((item,index) => {
         const modalItem = document.createElement('div');
         modalItem.innerHTML = item.nameBrand;
+
+        modalItem.addEventListener('click',()=>{
+          inputBrand.value = modalItem.innerHTML;
+          brand.removeChild(modal);
+        })
+
+        
         modal.appendChild(modalItem);
         return true;
       })
@@ -52,6 +60,12 @@ class Banner extends Component {
         if(String(item.nameBrand).search(re)>=0){
           const modalItem = document.createElement('div');
           modalItem.innerHTML = item.nameBrand;
+
+          modalItem.addEventListener('click',()=>{
+            inputBrand.value = modalItem.innerHTML;
+            brand.removeChild(modal);
+          })
+
           modal.appendChild(modalItem);
         }        
         return true;
@@ -59,7 +73,7 @@ class Banner extends Component {
     }
   }
 
-  isInputChange(event){
+  inputBrandChange(event){
     const target = event.target;
     const name = target.name;
     const value = target.value;
@@ -67,7 +81,7 @@ class Banner extends Component {
       [name] : value
     })
 
-    //const inputBrand = document.getElementById('brand-input');
+    const inputBrand = document.getElementById('brand-input');
     //remove old modal
     const brand = document.getElementById('brand');
     const oldModal = document.getElementById('modal-brand');
@@ -85,6 +99,12 @@ class Banner extends Component {
         if(String(item.nameBrand).search(re)>=0){
           const modalItem = document.createElement('div');
           modalItem.innerHTML = item.nameBrand;
+
+          modalItem.addEventListener('click',()=>{
+            inputBrand.value = modalItem.innerHTML;
+            brand.removeChild(modal);
+          })
+
           modal.appendChild(modalItem);
         }        
         return true;
@@ -93,12 +113,47 @@ class Banner extends Component {
       ListCar.map((item,index) => {        
         const modalItem = document.createElement('div');
         modalItem.innerHTML = item.nameBrand;
+        
+        modalItem.addEventListener('click',()=>{
+          inputBrand.value = modalItem.innerHTML;
+          brand.removeChild(modal);
+        })
+        
         modal.appendChild(modalItem);
         return true;
       })
     }
   }
   
+  //model
+  createModalModel(){
+    const inputBrand = document.getElementById('model-input');
+    const valueBrand = inputBrand.value;
+    if(valueBrand){
+      const model = document.getElementById("model");
+      const modal = document.createElement('div');
+      modal.id='modal-model';
+      model.appendChild(modal);
+
+      
+      ListCar.map((item,index) => {
+        //const re = new RegExp(value,"gi");
+        //if(String(item.nameBrand).search(re)>=0){
+        if(item.nameBrand === valueBrand){
+          const listModel = item.listModel;
+          listModel.map((itemModel)=>{
+            const modalItem = document.createElement('div');
+            modalItem.innerHTML = item.nameBrand;
+            modal.appendChild(modalItem);
+            
+            return true;
+          })
+        }
+        //}        
+        return true;
+      })
+    }
+  }
 
   
   componentDidMount() {
@@ -129,11 +184,12 @@ class Banner extends Component {
             <form className="form">
               <div className="input-data">
                 <div className="brand" id="brand"  ref={this.setBrandModal}>
-                  <input name="txtBrand" onChange={(event)=>this.isInputChange(event)} onClick={()=>this.createModalBrand()} id="brand-input" type="text" placeholder="Brand"/>
+                  <input name="txtBrand" onChange={(event)=>this.inputBrandChange(event)} onClick={()=>this.createModalBrand()} id="brand-input" type="text" placeholder="Brand"/>
 
                 </div>
-                <div className="model">
-                  <input name="txtModel" type="text" placeholder="Model" />
+                <div className="model" id="model">
+                  <input name="txtModel" type="text" placeholder="Model" id="model-input" onChange={(event)=>this.inputModelChange(event)} onClick={()=>this.createModalModel()}/>
+
                 </div>
                 <div className="age-year">
                   <select name="txtAge">
