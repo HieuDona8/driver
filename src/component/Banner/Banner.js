@@ -15,24 +15,48 @@ class Banner extends Component {
       txtAge   : null
     }
   }
-  
-
-  showBrandModal(){
-    const elem = document.getElementById('modal-brand');
-    elem.style.display = "block";
-  }
 
   hideModalBrand(event){
     if (this.wrapperRefBrand && !this.wrapperRefBrand.contains(event.target)) {
+      const brand = document.getElementById('brand');
       const elem = document.getElementById('modal-brand');
       if(elem){
-        elem.style.display = "none";
+        brand.removeChild(elem);
       }
     }
   }
    
   setBrandModal(node) {
     this.wrapperRefBrand = node;
+  }
+
+  createModalBrand(){
+    const inputBrand = document.getElementById('brand-input');
+
+    const brand = document.getElementById('brand');
+    const modal = document.createElement('div');
+    modal.id = 'modal-brand';
+    brand.appendChild(modal);
+
+    if(!inputBrand.value){
+      ListCar.map((item,index) => {
+        const modalItem = document.createElement('div');
+        modalItem.innerHTML = item.nameBrand;
+        modal.appendChild(modalItem);
+        return true;
+      })
+    }else{
+      const value = inputBrand.value;
+      ListCar.map((item,index) => {        
+        const re = new RegExp(value,"gi");
+        if(String(item.nameBrand).search(re)>=0){
+          const modalItem = document.createElement('div');
+          modalItem.innerHTML = item.nameBrand;
+          modal.appendChild(modalItem);
+        }        
+        return true;
+      })
+    }
   }
 
   isInputChange(event){
@@ -43,19 +67,49 @@ class Banner extends Component {
       [name] : value
     })
 
-    // ListCar.map((item,index) =>{
-      
-    // }
-    
-    console.log(value)
+    //const inputBrand = document.getElementById('brand-input');
+    //remove old modal
+    const brand = document.getElementById('brand');
+    const oldModal = document.getElementById('modal-brand');
+    if(oldModal){
+      brand.removeChild(oldModal);
+    }
+
+    const modal = document.createElement('div');
+    modal.id = 'modal-brand';
+    brand.appendChild(modal);
+
+    if(value){
+      ListCar.map((item,index) => {        
+        const re = new RegExp(value,"gi");
+        if(String(item.nameBrand).search(re)>=0){
+          const modalItem = document.createElement('div');
+          modalItem.innerHTML = item.nameBrand;
+          modal.appendChild(modalItem);
+        }        
+        return true;
+      })
+    }else{
+      ListCar.map((item,index) => {        
+        const modalItem = document.createElement('div');
+        modalItem.innerHTML = item.nameBrand;
+        modal.appendChild(modalItem);
+        return true;
+      })
+    }
   }
   
 
+  
   componentDidMount() {
     document.addEventListener('mousedown',this.hideModalBrand);
+    //this.createModalBrand();
+
+   
   }
   componentWillUnmount() {
     document.removeEventListener('mousedown',this.hideModalBrand)
+
   }
   
   render() {
@@ -74,26 +128,9 @@ class Banner extends Component {
             </div>
             <form className="form">
               <div className="input-data">
-                <div className="brand">
-                  <input name="txtBrand" onChange={(event)=>this.isInputChange(event)} onClick={()=>this.showBrandModal()} id="brand-input" type="text" placeholder="Brand"/>
-                  <div id="modal-brand" ref={this.setBrandModal}>
-                    {
-                      ListCar.map((item,index) =>{
-                        return <div name="txtValue"
-                            onClick={(event)=>{
-                               document.getElementById('brand-input').value=item.nameBrand;
-                               document.getElementById('modal-brand').style.display="none";
-                               this.setState({
-                                 txtBrand:item.nameBrand
-                               })
-                            }} 
-                            key={index}
-                          >
-                            {item.nameBrand}
-                        </div>
-                      })
-                    }
-                  </div>
+                <div className="brand" id="brand"  ref={this.setBrandModal}>
+                  <input name="txtBrand" onChange={(event)=>this.isInputChange(event)} onClick={()=>this.createModalBrand()} id="brand-input" type="text" placeholder="Brand"/>
+
                 </div>
                 <div className="model">
                   <input name="txtModel" type="text" placeholder="Model" />

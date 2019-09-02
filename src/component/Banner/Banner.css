@@ -150,7 +150,7 @@
 
 /*modal*/
 #modal-brand{
-  display: none;
+  display: block;
   z-index: 1;
   position: absolute;
   background-color: white;
