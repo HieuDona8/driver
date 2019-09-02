@@ -6,14 +6,8 @@ class Banner extends Component {
 
   constructor(props) {
     super(props);
-    this.setBrandModal = this.setBrandModal.bind(this);
-    this.hideModalBrand=this.hideModalBrand.bind(this);
-
-    this.state = {
-      txtBrand : null,
-      txtModel : null,
-      txtAge   : null
-    }
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.autoHideModal=this.autoHideModal.bind(this);
   }
   
 
@@ -22,8 +16,8 @@ class Banner extends Component {
     elem.style.display = "block";
   }
 
-  hideModalBrand(event){
-    if (this.wrapperRefBrand && !this.wrapperRefBrand.contains(event.target)) {
+  autoHideModal(event){
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       const elem = document.getElementById('modal-brand');
       if(elem){
         elem.style.display = "none";
@@ -31,37 +25,39 @@ class Banner extends Component {
     }
   }
    
-  setBrandModal(node) {
-    this.wrapperRefBrand = node;
+  setWrapperRef(node) {
+    this.wrapperRef = node;
   }
 
-  isInputChange(event){
-    const target = event.target;
-    const name = target.name;
-    const value = target.value;
-    this.setState({
-      [name] : value
-    })
-
-    // ListCar.map((item,index) =>{
-      
-    // }
-    
-    console.log(value)
-  }
+  
   
 
   componentDidMount() {
-    document.addEventListener('mousedown',this.hideModalBrand);
+    //this.autoHideModal();
+    document.addEventListener('mousedown',this.autoHideModal);
+    //const elem = document.getElementById('modal-brand');
+    // window.onclick=function(event){
+    //   if(elem.style.display === "block" && event.target !== elem){
+    //     console.log("hieudeptrai")
+    //     elem.style.display = "none";
+    //   }
+    // }
   }
   componentWillUnmount() {
-    document.removeEventListener('mousedown',this.hideModalBrand)
+    document.removeEventListener('mousedown',this.autoHideModal)
   }
+  
   
   render() {
     return (
       <section className="banner">
-        <div className="banner-img"></div>
+        <div className="banner-img">
+          {
+            ListCar.map((item) => {
+              return console.log(item.nameBrand);
+            })
+          }
+        </div>
         <div className="find-car">
           <div className="find-car-content">
             <div className="find-car-title">
@@ -75,18 +71,28 @@ class Banner extends Component {
             <form className="form">
               <div className="input-data">
                 <div className="brand">
-                  <input name="txtBrand" onChange={(event)=>this.isInputChange(event)} onClick={()=>this.showBrandModal()} id="brand-input" type="text" placeholder="Brand"/>
-                  <div id="modal-brand" ref={this.setBrandModal}>
+                  {/* <input type="text" placeholder="Brand" list="brand-name"/>
+                    <datalist id="brand-name">
+                      {
+                        ListCar.map((item, index) => {
+                          return <option key={index} value={item.nameBrand}></option>
+                          //return console.log(item.nameBrand);
+                        })
+                      }
+                      <option value="Boston"></option>
+                      <option value="Cambridge"></option>
+                    </datalist> */}
+                  <input onClick={()=>this.showBrandModal()} id="brand-input" type="text" placeholder="Brand"/>
+                  <div id="modal-brand" ref={this.setWrapperRef}>
                     {
                       ListCar.map((item,index) =>{
-                        return <div name="txtValue"
-                            onClick={(event)=>{
-                               document.getElementById('brand-input').value=item.nameBrand;
-                               document.getElementById('modal-brand').style.display="none";
-                               this.setState({
-                                 txtBrand:item.nameBrand
-                               })
-                            }} 
+                        return <div 
+                           
+                            // onClick={()=>{
+                            //   return console.log("hieudep trai")
+                              
+                            //   //document.getElementById('brand-input').value=item.nameBrand;
+                            // }} 
                             key={index}
                           >
                             {item.nameBrand}
@@ -96,10 +102,10 @@ class Banner extends Component {
                   </div>
                 </div>
                 <div className="model">
-                  <input name="txtModel" type="text" placeholder="Model" />
+                  <input type="text" placeholder="Model" />
                 </div>
                 <div className="age-year">
-                  <select name="txtAge">
+                  <select>
                     <option defaultValue value disabled>Age of car</option>
                   </select>
                 </div>
