@@ -301,10 +301,7 @@ class Banner extends Component {
   //////////////////////
   //select
   handChangeSelect(event){
-    const valueSelect = document.getElementById('select-age').value;
     this.getPrice();
-
-  
   }
 
   getPrice(){
@@ -330,12 +327,17 @@ class Banner extends Component {
                 case "than_10":
                     money.innerHTML = arrayPrice[2] + "$";
                   break;
+                  default:
+                      money.innerHTML ="$";
+                      break;
               }
-              console.log(arrayPrice);
-              return;
+
+              return true;
             }
+            return true;
           })
         }
+        return true;
       })
     }
     
