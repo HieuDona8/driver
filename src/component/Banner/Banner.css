@@ -204,3 +204,68 @@
   letter-spacing: -.1px;
   margin-bottom: 10px;
 }
+
+@media only screen and (min-width: 768px) {
+  
+.banner-img{
+  display: none;
+}
+  .banner{
+    background-image: url('../../assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
+
+  .find-car{
+    background-color: white;
+    width: 520px;
+    height: 464px;
+    padding: 30px 50px 50px;
+    margin: 0 auto;
+  }
+
+  .find-car-title{
+    font-size: 36px;
+  }
+
+  .find-about{
+    font-size: 20px;
+  }
+
+  .input-data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .brand{
+    flex-basis: 45%;
+    margin-bottom: 30px;
+  }
+  .model{
+    flex-basis: 45%;
+    margin-bottom: 30px;
+  }
+
+  .age-year{
+    flex-basis: 45%;
+  }
+
+  .brand >input, .model >input, .age-year >select{
+    font-size: 20px;
+  }
+
+  .submit-data{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-btn{
+    flex-basis: 45%;
+  }
+}
