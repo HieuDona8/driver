@@ -1,0 +1,145 @@
+.cover{
+  width: 100%;
+  height: auto;
+  background-color: #00a3ad;
+}
+
+.cover-content{
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.first-cover{
+  width: 100%;
+}
+
+.cover-title{
+  font-size: 30px;
+  font-weight: 900;
+  font-family: exljbris;
+  letter-spacing: -1px;
+
+  color: white;
+  margin: 18px 0;
+}
+
+.cover-text{
+  font-size: 20px;
+  line-height: 26px;
+  font-family: exljbris;
+  font-weight: 300;
+  letter-spacing: -0.1px;
+  color: white;
+}
+
+.cover-img{
+  margin: 20px 0;
+}
+.cover-img >img{
+  width: 338px;
+  height: 102px;
+}
+
+.btn-cover{
+  display: flex;
+  min-height: 50px;
+  background-color: #026786;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-family: exljbris;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+
+  text-transform: lowercase;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide-trust{
+  display: none;
+}
+
+.trust-title{
+  font-size: 30px;
+  font-weight: 900;
+  font-family: exljbris;
+  letter-spacing: -1px;
+
+  color: white;
+  margin: 18px 0;
+}
+
+.trust-text{
+  font-size: 20px;
+  line-height: 26px;
+  font-family: exljbris;
+  font-weight: 300;
+  letter-spacing: -0.1px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .cover-content{
+    margin: 0 7.5vw;
+    padding: 60px 0;
+  }
+
+  .cover-title{
+    font-size: 48px;
+    margin: 24px 0;
+  }
+
+  .cover-text{
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .btn-cover{
+    font-size: 30px;
+    width: 343px;
+    min-height: 65px;
+  }
+
+  .trust-title{
+    font-size: 48px;
+    margin: 24px 0;
+  }
+
+  .trust-text{
+    font-size: 27px;
+    line-height: 35px;
+    margin-bottom: 6px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cover-content{
+    flex-direction: row;
+  }
+
+  .first-cover,.trust{
+    width: 47%;
+  }
+
+  .hide-trust{
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .first-cover,.trust{
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .cover-content{
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+}

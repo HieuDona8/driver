@@ -1,0 +1,99 @@
+.share{
+  background-color: #026786;
+  width: 100%;
+  height: auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.share-title{
+  color: #ffcd05;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  font-family: exljbris;
+  margin: 18px 0;
+}
+
+.share-text{
+  color: white;
+  font-size: 20px;
+  font-family: exljbris;
+  line-height: 26px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.share-btn{
+  text-transform: lowercase;
+  color: #026786;
+  background-color: #ffcd05;
+  width: 100%;
+  min-height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+
+}
+
+@media only screen and (min-width: 768px) {
+  .share{
+    background-image: url('../../assets/shareBackground.png');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding: 50px 56px;
+  }
+
+  .hide-line{
+    display: none;
+  }
+
+  .share-title{
+    font-size: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .share-text{
+    margin-bottom: 66px;
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .share-btn{
+    width: 160px;
+    min-height: 65px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .share{
+    padding: 50px 77px;
+  }
+  .share-text{
+    max-width: 660px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .share{
+    padding: 50px 162px;
+  }
+
+}
+
+@media only screen and (min-width: 1920px) {
+  .share{
+    padding: 50px 410px;
+  }
+}
