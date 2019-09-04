@@ -45,6 +45,7 @@
 
 .model,.brand,.age-year{
   margin-bottom: 30px;
+  position: relative;
 }
 
 .model >input, .brand >input, .age-year>select{
@@ -160,7 +161,7 @@
   border-width: 0.5px;
   border-color: slategray;
   max-height: 150px;
-  width: calc(100% - 60px);
+  width: 100%;
   border-radius: 5px;
   border-bottom: 0.5px solid beige;
   overflow: auto;
@@ -188,10 +189,10 @@
   border-width: 0.5px;
   border-color: slategray;
   max-height: 150px;
-  width: calc(100% - 60px);
   border-radius: 5px;
   border-bottom: 0.5px solid beige;
   overflow: auto;
+  width: 100%;
 }
 
 #modal-model > div{
@@ -267,5 +268,40 @@
 
   .form-btn{
     flex-basis: 45%;
+    min-height: 65px;
+    font-size: 28px;
+  }
+
+  #money{
+    font-size: 48px;
+  }
+
+  .symol-money::after{
+    left: 0;
+  }
+  
+  .form{
+    width: 100%;
+    height: auto;
+  }
+ 
+ 
+  #modal-brand >div,  #modal-model>div{
+    font-size: 20px;
+  }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner{
+    height: 750px;
+    padding: 90px;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .find-car{
+    margin: 0;
   }
 }
