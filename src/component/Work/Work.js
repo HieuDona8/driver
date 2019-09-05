@@ -2,7 +2,25 @@ import React, { Component } from 'react';
 import './Work.css'
 import ImgVideo from './../../assets/videoLogo.6f135bad.png'
 
+
+
+
 class Work extends Component {
+
+
+  componentDidMount() {
+  
+    document.getElementById("watch-video").addEventListener('click',(event)=>{
+      const modal = document.getElementById("watch-modal");
+      modal.style.display = "flex";
+    })
+
+    document.getElementById("control-btn").addEventListener('click',(event)=>{
+      const modal = document.getElementById("watch-modal");
+      modal.style.display = "none";
+    })
+  }
+
   render() {
     return (
       <section className="work">
@@ -16,15 +34,15 @@ class Work extends Component {
                 <span>Drive lah makes it simple and secure to share your car with real people. Watch our short how it works video.</span>
               </div>
             </div>
-            <div className="watch-video">
+            <div className="watch-video" id="watch-video">
               <img src={ImgVideo}/>
             </div>
-            <div className="watch-modal">
+            <div className="watch-modal" id="watch-modal">
               <div className="watch-modal-content">
                 <div className="control">
-                  <button className="control-btn">
+                  <button className="control-btn" id="control-btn">
                     <span>CLOSE</span>
-                    <svg class="Modal__closeIcon__34RPE" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-1 -1)" fill-rule="evenodd"><rect transform="rotate(45 7 7)" x="-1" y="6" width="16" height="2" rx="1"></rect><rect transform="rotate(-45 7 7)" x="-1" y="6" width="16" height="2" rx="1"></rect></g></svg>
+                    <svg className="Modal__closeIcon__34RPE" width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-1 -1)" fillRule="evenodd"><rect transform="rotate(45 7 7)" x={-1} y={6} width={16} height={2} rx={1} /><rect transform="rotate(-45 7 7)" x={-1} y={6} width={16} height={2} rx={1} /></g></svg>
                   </button>
                 </div>
 

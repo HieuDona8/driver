@@ -1,0 +1,45 @@
+.ask{
+  width: 100%;
+  padding: 0 20px;
+  padding-bottom: 34px;
+}
+
+.ask-content{
+  width: 100%;
+}
+
+.list-title{
+  color: #026786;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: exljbris;
+  letter-spacing: -1px;
+  
+  margin: 18px 0;
+}
+
+.list-ask{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .ask{
+    padding: 34px 0;
+  }
+
+  .ask-content{
+    width: auto;
+    margin: 0 7.5vw;
+  }
+
+  .list-title{
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  .list-ask{
+    justify-content: space-between;
+  }
+}

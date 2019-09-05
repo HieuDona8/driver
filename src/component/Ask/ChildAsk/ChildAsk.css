@@ -1,0 +1,32 @@
+.ask-item{
+  flex-basis: 100%;
+  margin: 20px 0;
+}
+
+.ask-title{
+  font-size: 20px;
+  font-family: exljbris;
+  color: #00a3ad;
+  line-height: 30px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #00a3ad;
+}
+
+.modal-text{
+  display: none;
+
+  margin-top: 2px;
+  padding: 5px 15px 30px;
+  font-size: 20px;
+  font-family: exljbris;
+  font-weight: 300;
+  background-color: #00a3ad;
+  color: white;
+  line-height: 30px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .ask-item{
+    flex-basis: 45%;
+  }
+}

@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import Share from '../Share/Share';
 import Cover from '../Cover/Cover';
 import Work from '../Work/Work';
+import Ask from '../Ask/Ask';
 
 
 export class App extends Component {
@@ -18,6 +19,7 @@ export class App extends Component {
         <Share></Share>
         <Cover></Cover>
         <Work></Work>
+        <Ask></Ask>
       </div>
     );
   }
