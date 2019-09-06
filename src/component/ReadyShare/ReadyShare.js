@@ -7,23 +7,27 @@ class ReadyShare extends Component {
       <section className="ready">
         <div className="ready-content">
           <div className="ready-banner">
-            <div className="banner-title">
-              <span>
-                Ready share 
-                <span className="break-title"><br /></span>
-                your car?</span>
+            <div className="banner-content">
+              <div className="banner-title">
+                <span>
+                  Ready share &nbsp;
+                  <span className="break-title"><br /></span>
+                  your car?</span>
+              </div>
+              <a className="btn-show" href="true">
+                <span>list your car</span>
+              </a>
             </div>
-            <a className="btn-show" href>
-              <span>list your car</span>
-            </a>
           </div>
           <div className="info-ready">
-            <div className="info-ready-title">
-              <span>Commercial cars?</span>
-            </div>
-            <div className="info-contac">
-              <span>Please call us at +65 3138 9153 or send us an email at support@drivelah.sg</span>
-            </div>
+            <div className="info-ready-content">
+              <span className="info-ready-title">
+                Commercial cars?&nbsp;
+              </span>
+              <span className="info-contac">
+                Please call us at +65 3138 9153 or send us an email at support@drivelah.sg
+              </span>
+            </div>            
           </div>
         </div>
       </section>

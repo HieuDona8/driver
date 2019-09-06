@@ -7,6 +7,7 @@ import Cover from '../Cover/Cover';
 import Work from '../Work/Work';
 import Ask from '../Ask/Ask';
 import ReadyShare from '../ReadyShare/ReadyShare';
+import Footer from '../Footer/Footer';
 
 
 export class App extends Component {
@@ -22,6 +23,7 @@ export class App extends Component {
         <Work></Work>
         <Ask></Ask>
         <ReadyShare></ReadyShare>
+        <Footer></Footer>
       </div>
     );
   }

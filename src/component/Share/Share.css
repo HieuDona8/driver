@@ -27,6 +27,7 @@
 }
 
 .share-btn{
+  cursor: pointer;
   text-transform: lowercase;
   color: #026786;
   background-color: #ffcd05;

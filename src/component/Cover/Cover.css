@@ -43,6 +43,7 @@
 }
 
 .btn-cover{
+  cursor: pointer;
   display: flex;
   min-height: 50px;
   background-color: #026786;

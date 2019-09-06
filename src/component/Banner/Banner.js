@@ -61,10 +61,6 @@ class Banner extends Component {
 
         modalItem.addEventListener('click',()=>{
           inputBrand.value = modalItem.innerHTML;
-          // this.setState({
-          //   txtBrand : modalItem.innerHTML
-          // })
-
           brand.removeChild(modal);
         })
 
@@ -85,10 +81,6 @@ class Banner extends Component {
 
           modalItem.addEventListener('click',()=>{
             inputBrand.value = modalItem.innerHTML;
-            // this.setState({
-            //   txtBrand : modalItem.innerHTML
-            // })
-  
 
             brand.removeChild(modal);
           })
