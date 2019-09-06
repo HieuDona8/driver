@@ -6,6 +6,7 @@ import Share from '../Share/Share';
 import Cover from '../Cover/Cover';
 import Work from '../Work/Work';
 import Ask from '../Ask/Ask';
+import ReadyShare from '../ReadyShare/ReadyShare';
 
 
 export class App extends Component {
@@ -20,6 +21,7 @@ export class App extends Component {
         <Cover></Cover>
         <Work></Work>
         <Ask></Ask>
+        <ReadyShare></ReadyShare>
       </div>
     );
   }

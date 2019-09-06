@@ -1,0 +1,55 @@
+.ready{
+  width: 100%;
+}
+
+.ready-content{
+
+}
+
+.ready-banner{
+  background-image: url('./../../assets/readybanner.jpg');
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner-title{
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  font-family: exljbris;
+  font-weight: 900;
+  color: white;
+}
+
+.btn-show{
+  display: flex;
+  background-color: #026786;
+  border-radius: 5px;
+  width: 200px;
+  min-height: 50px;
+  color: white;
+  font-family: exljbris;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -.3px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn-show >span{
+
+}
+
+.break-title{
+
+}
